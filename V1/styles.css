@@ -89,13 +89,26 @@ h1 {
 }
 
 .dropdown-menu li {
+    display: flex;
+    align-items: center;
     padding: 10px 20px;
     white-space: nowrap; /* Assure que chaque élément s'affiche sur une seule ligne */
+    transition: box-shadow 0.3s ease; /* Animation pour l'ombre portée */
+}
+
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px; /* Espace entre l'image et le texte */
 }
 
 .dropdown-menu li a {
     color: #000;
     text-decoration: none;
+}
+
+.dropdown-menu li:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Ombre portée au survol */
 }
 
 .dropdown:hover .dropdown-menu,
