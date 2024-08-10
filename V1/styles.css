@@ -19,9 +19,7 @@ header {
 
 .main-nav {
     display: flex;
-    flex-direction: column; /* Alignement en colonne pour centrer horizontalement */
-    align-items: center; /* Centrer horizontalement */
-    width: 100%;
+    align-items: center;
 }
 
 h1 {
@@ -34,8 +32,8 @@ h1 {
     display: flex;
     gap: 20px; /* Espacement entre les liens de navigation */
     list-style-type: none;
-    padding: 0;
-    margin: 10px 0; /* Espacement autour des liens */
+    padding-left: 40px; /* Espace entre le titre et les liens */
+    margin: 0;
 }
 
 .nav-links a {
