@@ -15,21 +15,24 @@ header {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    position: relative; /* Pour positionner correctement les éléments internes */
+    position: relative;
 }
 
 .header-content {
     display: flex;
-    flex-direction: column; /* Alignement en colonne pour le titre et les liens de navigation */
-    align-items: center; /* Centrer horizontalement */
-    width: 100%;
+    align-items: center;
+    flex: 1; /* Permet au contenu du header de s'étendre */
+    width: auto; /* Ajuste la largeur pour éviter le retour à la ligne */
+    justify-content: space-between; /* Espace entre le titre et les icônes de navigation */
 }
 
 h1 {
     margin: 0;
     font-size: 24px;
     font-weight: 700;
-    text-align: center; /* Centre le texte horizontalement */
+    text-align: left;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: visible; /* Assure que le texte est visible même s'il dépasse */
 }
 
 .main-nav {
@@ -44,7 +47,7 @@ h1 {
     gap: 20px; /* Espacement entre les liens de navigation */
     list-style-type: none;
     padding: 0;
-    margin: 10px 0; /* Espacement autour des liens */
+    margin: 0;
 }
 
 .nav-links a {
@@ -77,7 +80,7 @@ h1 {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
+    background-color: #E3E3E3; /* Couleur de fond */
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -86,6 +89,7 @@ h1 {
     max-height: 0;
     overflow: hidden;
     transition: opacity 0.8s ease, max-height 0.8s ease; /* Animation pour l'opacité et la hauteur */
+    border-radius: 10px; /* Coins arrondis */
 }
 
 .dropdown-menu li {
@@ -121,8 +125,6 @@ h1 {
 .social-icons {
     display: flex;
     gap: 20px; /* Espacement entre les icônes */
-    position: absolute;
-    right: 20px; /* Espace depuis le bord droit de la page */
 }
 
 .social-icons a {
