@@ -19,7 +19,9 @@ header {
 
 .main-nav {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Alignement en colonne pour centrer horizontalement */
+    align-items: center; /* Centrer horizontalement */
+    width: 100%;
 }
 
 h1 {
@@ -32,8 +34,8 @@ h1 {
     display: flex;
     gap: 20px; /* Espacement entre les liens de navigation */
     list-style-type: none;
-    padding-left: 40px; /* Espace entre le titre et les liens */
-    margin: 0;
+    padding: 0;
+    margin: 10px 0; /* Espacement autour des liens */
 }
 
 .nav-links a {
@@ -72,11 +74,14 @@ h1 {
     margin: 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     opacity: 0;
-    transition: opacity 0.8s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.8s ease, max-height 0.8s ease; /* Animation pour l'opacité et la hauteur */
 }
 
 .dropdown-menu li {
     padding: 8px 20px;
+    white-space: nowrap; /* Empêche le retour à la ligne des éléments */
 }
 
 .dropdown-menu li a {
@@ -87,19 +92,5 @@ h1 {
 .dropdown:hover .dropdown-menu {
     display: block;
     opacity: 1;
-}
-
-.social-icons {
-    display: flex;
-    gap: 20px; /* Espacement entre les icônes */
-}
-
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-}
-
-.social-icons a {
-    display: inline-block;
+    max-height: 200px; /* Ajuste selon la hauteur nécessaire pour les éléments */
 }
