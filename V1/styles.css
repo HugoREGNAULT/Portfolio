@@ -137,44 +137,6 @@ h1 {
     height: 32px;
 }
 
-.intro {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 40px;
-    text-align: left;
-}
-
-.intro-content {
-    display: flex;
-    align-items: center;
-    max-width: 800px;
-    position: relative;
-}
-
-h2 {
-    font-size: 48px;
-    margin: 0;
-    color: #000;
-    margin-right: 20px;
-}
-
-.role-text-container {
-    overflow: hidden;
-    height: 40px;
-    position: relative;
-}
-
-#role-text {
-    display: inline-block;
-    font-size: 36px;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
 @keyframes slideIn {
     from {
         transform: translateY(15px);
@@ -227,4 +189,106 @@ h2 {
     background-clip: text;
     color: transparent;
     animation: slideIn 0.4s ease 3.2s, slideOut 0.4s ease 4.0s;
+}
+
+.software-used {
+    text-align: left; /* Aligne le texte à gauche */
+    margin: 40px 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.software-used h2 {
+    font-size: 36px;
+    color: #02002F;
+    margin-bottom: 20px;
+}
+
+.software-list {
+    display: flex;
+    gap: 20px; /* Espacement entre les éléments */
+    flex-wrap: wrap; /* Permet à la liste de se décaler sur plusieurs lignes si nécessaire */
+}
+
+.software-item {
+    display: flex;
+    align-items: center; /* Aligne le texte verticalement par rapport au logo */
+    background-color: #E3E3E3;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.software-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px; /* Espace entre l'image et le texte */
+}
+
+.software-item p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500; /* Médium */
+    color: #000;
+}
+
+/* Optionnel : Assure que les items sont tous sur la même ligne */
+.software-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+
+/* CSS */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.rights {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #bbb;
 }
